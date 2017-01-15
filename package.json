@@ -1,0 +1,35 @@
+{
+  "name": "reference-instance",
+  "license": "MIT",
+  "private": true,
+  "author": "Matt Travi",
+  "description": "an instance of a greenkeeper-keeper service that should serve as a good reference implementation",
+  "repository": "greenkeeper-keeper/reference-instance",
+  "bugs": "https://github.com/greenkeeper-keeper/reference-instance/issues",
+  "homepage": "https://github.com/greenkeeper-keeper/reference-instance#readme",
+  "scripts": {
+    "lint:md": "globstar --node -- markdownlint **/*.md",
+    "tests:unit": "mocha --recursive test/unit",
+    "test": "run-s lint:* coverage",
+    "coverage": "nyc run-s tests:unit",
+    "commitmsg": "validate-commit-msg",
+    "precommit": "npm test"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "@travi/any": "1.0.2",
+    "chai": "3.5.0",
+    "cz-conventional-changelog": "1.2.0",
+    "globstar": "1.0.0",
+    "husky": "0.12.0",
+    "markdownlint-cli": "0.2.0",
+    "mocha": "3.2.0",
+    "npm-run-all": "4.0.0",
+    "nyc": "10.0.0",
+    "validate-commit-msg": "2.8.2"
+  }
+}
