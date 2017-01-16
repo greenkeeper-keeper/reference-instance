@@ -14,7 +14,10 @@
     "tests:integration:wip": "cucumber.js test/integration --compiler js:babel-register --tags @wip",
     "test": "run-s lint:* tests:*",
     "commitmsg": "validate-commit-msg",
-    "precommit": "npm test"
+    "precommit": "npm test",
+    "build": "babel src --out-dir lib",
+    "start": "node lib/index.js",
+    "postinstall": "run-s build"
   },
   "config": {
     "commitizen": {
