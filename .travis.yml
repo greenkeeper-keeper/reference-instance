@@ -1,3 +1,10 @@
 language: node_js
 notifications:
   email: false
+deploy:
+  provider: heroku
+  api_key:
+    secure: rtp16dVNAMpiJK+SzSkr/DZhnoRYEq7dlnuOJr/kLm1Q/666x+hFzbPUirXpH78MclMPOJH26eNiepmrfGAF+57k+kG2zvUHQkZCSWk8C1M3M1vVt8LZyWkXhNBKYGV6AmqmUB7tUOFYmqHmNTuIoAJC0oqPQt/UuijxVLG4R49H8vmczTF829x9HqgREh2Du3rcXV9m541xKpSNB1Sv0beRU8AR8JQHxw2vr+T11kJKSQplLZ+hkynnxwCZD/dmLY58iA+woJwzdxBFnBZS+3EM+gWtuXN1AqOzs32j2VpQsiwHu6PGvCxzXhZYjTV0LTHOQnG/Y0z/zS4yMWiPn8/3UEmXP6r3E5X/Apf5MAMeLs2BDPK+QBJc2S6aAWYvMkOmHxMBdVxO91eudvztpM2mLcmNFLXoSKLUCZh4MJqG5v57jno/Ivj7nO0iSEMJzqMl8DBLnB/4YGWNvniBnkNApteZTeuGAWxqi4TbvjfnBC/N9Ig63QQo8zdrmNT6+ZbsfmUz3EqbqdV62vxlQNc/ER+f3bvG1rEcx/CsA6vhkZQJLmbzKLgL9381D7eRLc9UrNAWVy1EiYVbLKG+YVOfMUOlJoXPSQ5k73ibgXtCCJUSibdz8tFX/r+4btNE6mxoKNn7viw07YaAIczSTOPjUJFkuSvGSKiIWpS4mI0=
+  app: gk-keeper
+  on:
+    repo: greenkeeper-keeper/reference-instance
