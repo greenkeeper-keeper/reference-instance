@@ -33,6 +33,8 @@ export default {
           squash: false
         }
       }
-    }
+    },
+    {plugin: 'hapi-github-webhooks'},
+    {plugin: './auth'}
   ]
 };
