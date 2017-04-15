@@ -1,8 +1,20 @@
 FROM node:alpine
+
+ARG VCS_REF
+ARG BUILD_DATE
+
+LABEL org.label-schema.name="greenkeeper-keeper" \
+      org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.vcs-url="e.g. https://github.com/greenkeeper-keeper/reference-instance" \
+      org.label-schema.build-date=$BUILD_DATE \
+      org.label-schema.schema-version="1.0.0-rc.1"
+
 ENV NODE_ENV=production
+
 RUN mkdir -p /app
 WORKDIR /app
 COPY . /app
 EXPOSE 8080
 RUN npm install --prod
+
 CMD ["npm", "start"]
