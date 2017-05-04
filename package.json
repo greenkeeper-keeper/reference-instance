@@ -17,7 +17,7 @@
     "precommit": "npm test",
     "build": "babel src --out-dir lib",
     "start": "node lib/index.js",
-    "postinstall": "run-s build"
+    "postinstall": "node node_modules/npm-run-all/bin/run-s/index.js build"
   },
   "config": {
     "commitizen": {
