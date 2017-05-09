@@ -11,10 +11,9 @@ LABEL org.label-schema.name="greenkeeper-keeper" \
 
 ENV NODE_ENV=production
 
-RUN mkdir -p /app
-WORKDIR /app
-COPY . /app
+COPY . .
 EXPOSE 8080
-RUN npm install --prod
+RUN npm install --dev
+RUN npm run build
 
 CMD ["npm", "start"]

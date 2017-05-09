@@ -1,9 +1,7 @@
-src/
 test/
 node_modules/
 .git/
 
-.babelrc
 .editorconfig
 .eslintignore
 .gitattributes
