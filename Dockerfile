@@ -15,5 +15,6 @@ COPY . .
 EXPOSE 8080
 RUN npm install --dev
 RUN npm run build
+RUN npm prune --production
 
 CMD ["npm", "start"]
