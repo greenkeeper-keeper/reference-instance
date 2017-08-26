@@ -7,6 +7,7 @@ reference for creating your own custom instance
 [![license](https://img.shields.io/github/license/greenkeeper-keeper/reference-instance.svg)](LICENSE)
 
 [![Build Status](https://img.shields.io/travis/greenkeeper-keeper/reference-instance.svg?style=flat&branch=master)](https://travis-ci.org/greenkeeper-keeper/reference-instance)
+[![Docker Build Status](https://img.shields.io/docker/build/greenkeeperkeeper/reference-instance.svg)](https://hub.docker.com/r/greenkeeperkeeper/reference-instance/builds/)
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 ![greenkeeper badge](https://badges.greenkeeper.io/greenkeeper-keeper/reference-instance.svg)
@@ -29,3 +30,17 @@ and are defined in [`.env.example`](./.env.example)
   scopes in order to work properly
 * `GITHUB_WEBHOOK_SECRET`: a secret used to [secure your webhooks](https://developer.github.com/webhooks/securing/)
   which must match the secret used for the webhook defined for each repo
+
+## Deployment
+
+### Docker
+
+[![Docker Pulls](https://img.shields.io/docker/pulls/greenkeeperkeeper/reference-instance.svg)](https://hub.docker.com/r/greenkeeperkeeper/reference-instance/)
+
+### Heroku
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+### Zeit now
+
+[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/greenkeeperkeeper/reference-instance&env=GITHUB_TOKEN&env=GITHUB_WEBHOOK_SECRET)
