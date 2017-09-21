@@ -2,7 +2,9 @@
 
 # $IMAGE_NAME var is injected into the build so the tag is correct.
 
-docker build --build-arg VCS_REF=`git rev-parse --short HEAD` \
+docker build --build-arg VCS_REF=${SOURCE_COMMIT} \
+  --build-arg VCS_URL=${SOURCE_URL} \
   --build-arg BUILD_DATE=`date -u +”%Y-%m-%dT%H:%M:%SZ”` \
   --build-arg NODE_VERSION=`cat ./.nvmrc` \
+  --build-arg VERSION=${DOCKER_TAG} \
   -t $IMAGE_NAME .
