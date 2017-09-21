@@ -2,7 +2,7 @@ ARG VCS_REF
 ARG BUILD_DATE
 ARG NODE_VERSION
 
-FROM node:alpine:$NODE_VERSION
+FROM mhart/alpine-node:$NODE_VERSION
 
 LABEL org.label-schema.name="greenkeeper-keeper" \
       org.label-schema.vcs-ref=$VCS_REF \
