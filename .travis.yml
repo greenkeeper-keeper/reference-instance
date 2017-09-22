@@ -1,7 +1,11 @@
 language: node_js
 notifications:
   email: false
-before_script: if ! git rev-parse v`jq '.dependencies."hapi-greenkeeper-keeper"' -r package.json` >/dev/null 2>&1; then git tag v`jq '.dependencies."hapi-greenkeeper-keeper"' -r package.json`; fi
+before_script:
+- git config --global user.email "$GIT_EMAIL"
+- git config --global user.name "$GIT_NAME"
+- if ! git rev-parse v`jq '.dependencies."hapi-greenkeeper-keeper"' -r package.json` >/dev/null 2>&1; then git tag v`jq '.dependencies."hapi-greenkeeper-keeper"' -r package.json`; fi
+after_success: git push --tags https://$GH_TOKEN@github.com/greenkeeper-keeper/reference-instance &2>/dev/null
 deploy:
   provider: heroku
   api_key:
@@ -9,3 +13,6 @@ deploy:
   app: gk-keeper
   on:
     repo: greenkeeper-keeper/reference-instance
+env:
+  global:
+    secure: KWEVIvKf9yC1A5ZZihT2c0lC2doWbH1kbhkk07uZbTUebYHGt5GKPZNSoUc0Po2UGYLRYQiVKyJViE6SSRtsppuEVRBxNq1FDth3cepObGRZQrxeQj2HPNyc/wn66fcev5CDUic6CdDGa0BsbUNWJeO5o8lAtFwANrXZiwnPSPb9if7V+YQ5kHkpoCEeDTAe2tZjdGVPz8Rn1TNXXmLxzncpqkW9qmbv9hP496p1o7OJph/X+2qw2uG5ZZWVliGy5oSG/4w9YmZ9nW+fhVFAoHoMTI2sqpYLXzVGtDPu/MsOgwB1cD3gnEGJEL29vja0WTXK/8r9v6F4wqbaTxUg3iU3EhX/GAs/mUCGUpDB8ljPGUlaN0PfnVRjuupkm6qiTRMDVaRbOLUPbL8N8w7yeWhuvhW22xI17Z7BTTFQFKIsDHwTno1tTYrfHo2T+9y1wxeg+axIQaGQOk3l84ZYUmEY8FFAnd2twCmKp8CJzEBcaEbscXUndlRkwxIlpXrtot9wLFJrTERSpp/tjxj7v5xsPuLdF8fU6dUBus4kEglZH+MpORDcNUbdw3jyqRxJcPoazV4iPFhBwpV91VixJCEiA4D/YTofMe6qOlcgXE2qvWlhkPFBSfmHBGoGHvDEWJqCg/TxYp3PaCCDuYAiHsQltLws9OkJB5BBgAXfrRc=
