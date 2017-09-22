@@ -1,7 +1,7 @@
 language: node_js
 notifications:
   email: false
-before_script: which jq
+before_script: git rev-parse v`jq '.dependencies."hapi-greenkeeper-keeper"' -r package.json`
 deploy:
   provider: heroku
   api_key:
