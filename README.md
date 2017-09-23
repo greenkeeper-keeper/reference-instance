@@ -31,11 +31,29 @@ and are defined in [`.env.example`](./.env.example)
 * `GITHUB_WEBHOOK_SECRET`: a secret used to [secure your webhooks](https://developer.github.com/webhooks/securing/)
   which must match the secret used for the webhook defined for each repo
 
+## Tagging strategy
+
+Since this instance is intended as a reference instance of a [hapi](https://hapijs.com/)
+server using the [hapi-greenkeeper-keeper](https://github.com/greenkeeper-keeper/hapi-greenkeeper-keeper)
+plugin, the instance is versions solely based on the version of the plugin. Each
+time a new version of the plugin is this repo is tagged with that version.
+
+Keep in mind that other changes could be introduced to this reference instance
+that do not change the version in a way that is informative related to semver.
+If you need to manage updates for your server using a different strategy, you
+are encouraged to include the hapi plugin in your own server instance, using
+this reference only as a guide for creating your server.
+
 ## Deployment
 
 ### Docker
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/greenkeeperkeeper/reference-instance.svg)](https://hub.docker.com/r/greenkeeperkeeper/reference-instance/)
+
+#### Versioning strategy
+
+Docker tags use the same versioning strategy as is outlined above for git tags.
+Each git tage results in a tagged image.
 
 ### Heroku
 
