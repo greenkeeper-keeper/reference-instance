@@ -1,18 +1,15 @@
 language: node_js
 notifications:
   email: false
-before_script:
-- git config --global user.email "$GIT_EMAIL"
-- git config --global user.name "$GIT_NAME"
-- if ! git rev-parse v`jq '.dependencies."hapi-greenkeeper-keeper"' -r package.json` >/dev/null 2>&1; then git tag v`jq '.dependencies."hapi-greenkeeper-keeper"' -r package.json`; fi
-after_success: git push --tags https://$GH_TOKEN@github.com/greenkeeper-keeper/reference-instance &2>/dev/null
 deploy:
-  provider: heroku
+- provider: heroku
   api_key:
     secure: mILDb3Xrn8APcXobhvwbIrSU3OaDmlMgYj+N7+t9v5v5G4LDE1myWTagsI5qTJUcrLrFs6XFuZz6r1HwsKF9xNSuDRdgPeqO4YViDz2FxoHNBTKbLRPq/OZunAFO7ydwDkTV+tfb5LyT9Xo2Lq1fIs8P9NGwHKQ19Qwjujq7oj9r+lzX1bzB6u20xQszvf6P8B5JwH1JogN23dptjEqZRV8ler7tsyf30lPjOxMwEv2uEMnj2jW1/rxWnaJqmfySoAJ2qxihdhWjZRqnpdKw/vosQ6ZLYGSElQSHq0n8hWlAwnA4DoK/HicEEryAuXKBzDYWoYWkmuAUin6cD2H93YYXEtXeQl9KVKmeaUqrnHjgZVmqTCFbWFmLRZTgXUyAxNUga+/28YrltneAPQAO4kyFYDaCGCCaK7otn2z6l4GdTj64gMwBjZICVR86DBrTALrT8QVleMc4wr35wK8ofOWVauvDN2plutOBgZrbDHMhv+7cLs/c6Cagr586e3paQihuVJDZAnwude5+zg0nzIIS7FR2+NSf9eP4ShgVGP2A5yTC7I7X+kD65fe1xVsivCr5vKbSAhbArnvSQS4JmAWMvuDfhkcEmj8koyhImEGyU856lfSOS51uktY42VmnYoJCehUn4wgDde7eWuEJy+l3N7S8o9kYWAIoiBbSWKM=
   app: gk-keeper
   on:
     repo: greenkeeper-keeper/reference-instance
+- provider: script
+  script: scripts/tag.sh
 env:
   global:
     secure: KWEVIvKf9yC1A5ZZihT2c0lC2doWbH1kbhkk07uZbTUebYHGt5GKPZNSoUc0Po2UGYLRYQiVKyJViE6SSRtsppuEVRBxNq1FDth3cepObGRZQrxeQj2HPNyc/wn66fcev5CDUic6CdDGa0BsbUNWJeO5o8lAtFwANrXZiwnPSPb9if7V+YQ5kHkpoCEeDTAe2tZjdGVPz8Rn1TNXXmLxzncpqkW9qmbv9hP496p1o7OJph/X+2qw2uG5ZZWVliGy5oSG/4w9YmZ9nW+fhVFAoHoMTI2sqpYLXzVGtDPu/MsOgwB1cD3gnEGJEL29vja0WTXK/8r9v6F4wqbaTxUg3iU3EhX/GAs/mUCGUpDB8ljPGUlaN0PfnVRjuupkm6qiTRMDVaRbOLUPbL8N8w7yeWhuvhW22xI17Z7BTTFQFKIsDHwTno1tTYrfHo2T+9y1wxeg+axIQaGQOk3l84ZYUmEY8FFAnd2twCmKp8CJzEBcaEbscXUndlRkwxIlpXrtot9wLFJrTERSpp/tjxj7v5xsPuLdF8fU6dUBus4kEglZH+MpORDcNUbdw3jyqRxJcPoazV4iPFhBwpV91VixJCEiA4D/YTofMe6qOlcgXE2qvWlhkPFBSfmHBGoGHvDEWJqCg/TxYp3PaCCDuYAiHsQltLws9OkJB5BBgAXfrRc=
