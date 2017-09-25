@@ -1,6 +1,9 @@
 language: node_js
 notifications:
   email: false
+branches:
+  except:
+  - "/^v\\d+\\.\\d+\\.\\d+$/"
 deploy:
 - provider: heroku
   api_key:
