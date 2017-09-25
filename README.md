@@ -53,7 +53,7 @@ this reference only as a guide for creating your server.
 #### Versioning strategy
 
 Docker tags use the same versioning strategy as is outlined above for git tags.
-Each git tage results in a tagged image.
+Each git tag results in a tagged image.
 
 ### Heroku
 
