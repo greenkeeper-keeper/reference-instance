@@ -39,9 +39,7 @@ export default function (env) {
     plugins: removeEmpty([
       ifProduction(new CleanPlugin([assetsPath], {root: __dirname})),
       new webpack.DefinePlugin({
-        'process.env': removeEmpty({
-          NODE_ENV: JSON.stringify(env)
-        })
+        'process.env.NODE_ENV': JSON.stringify(env)
       }),
       ifProduction(new webpack.optimize.ModuleConcatenationPlugin()),
       ifProduction(new LodashModuleReplacementPlugin()),
