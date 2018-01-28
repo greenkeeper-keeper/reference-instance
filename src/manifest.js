@@ -34,6 +34,15 @@ export default {
         }
       }
     },
+    {
+      plugin: {
+        register: 'hapi-graceful-shutdown-plugin',
+        options: {
+          sigtermTimeout: 10,
+          sigintTimeout: 1
+        }
+      }
+    },
     {plugin: 'hapi-github-webhooks'},
     {plugin: './auth'}
   ]
