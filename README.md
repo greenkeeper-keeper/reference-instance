@@ -59,6 +59,9 @@ Each git tag results in a tagged image.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
+Since build steps have to happen on the heroku side, ensure that the `devDependencies`
+are installed there by setting `NPM_CONFIG_PRODUCTION=false`
+
 ### Zeit now
 
 [![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/greenkeeperkeeper/reference-instance&env=GITHUB_TOKEN&env=GITHUB_WEBHOOK_SECRET)
