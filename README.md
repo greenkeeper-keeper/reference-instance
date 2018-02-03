@@ -50,7 +50,8 @@ this reference only as a guide for creating your server.
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/greenkeeperkeeper/reference-instance.svg)](https://hub.docker.com/r/greenkeeperkeeper/reference-instance/)
 [![Latest Docker Image](https://images.microbadger.com/badges/version/greenkeeperkeeper/reference-instance.svg)](https://microbadger.com/images/greenkeeperkeeper/reference-instance)
-[![Doscker Images Layers](https://images.microbadger.com/badges/image/greenkeeperkeeper/reference-instance.svg)](https://microbadger.com/images/greenkeeperkeeper/reference-instance)
+[![Commit of Docker Image](https://images.microbadger.com/badges/commit/greenkeeperkeeper/reference-instance.svg)](https://microbadger.com/images/greenkeeperkeeper/reference-instance)
+[![Docker Images Layers](https://images.microbadger.com/badges/image/greenkeeperkeeper/reference-instance.svg)](https://microbadger.com/images/greenkeeperkeeper/reference-instance)
 
 #### Versioning strategy
 
