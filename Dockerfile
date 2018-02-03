@@ -1,9 +1,10 @@
+ARG NODE_VERSION
+
 FROM mhart/alpine-node:$NODE_VERSION
 
 ARG VCS_REF
 ARG VCS_URL
 ARG BUILD_DATE
-ARG NODE_VERSION
 ARG VERSION
 
 LABEL org.label-schema.name="greenkeeper-keeper" \
