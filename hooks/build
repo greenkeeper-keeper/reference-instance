@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Available environment variables: https://docs.docker.com/docker-cloud/builds/advanced/#environment-variables-for-building-and-testing
-# $IMAGE_NAME var is injected into the build so the tag is correct.
 
 docker build --build-arg VCS_REF=${SOURCE_COMMIT} \
   --build-arg VCS_URL="https://github.com/greenkeeper-keeper/reference-instance" \
