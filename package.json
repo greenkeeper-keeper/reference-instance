@@ -46,7 +46,7 @@
     "validate-commit-msg": "2.14.0"
   },
   "dependencies": {
-    "dotenv-safe": "4.0.4",
+    "dotenv-safe": "5.0.0",
     "glue": "4.2.0",
     "good": "7.3.0",
     "good-console": "7.0.1",
