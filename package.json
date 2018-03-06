@@ -53,6 +53,6 @@
     "good-squeeze": "5.0.2",
     "hapi-github-webhooks": "1.0.3",
     "hapi-graceful-shutdown-plugin": "1.0.1",
-    "hapi-greenkeeper-keeper": "1.2.11"
+    "hapi-greenkeeper-keeper": "1.2.13"
   }
 }
