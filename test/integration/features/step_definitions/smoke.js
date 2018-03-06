@@ -11,6 +11,7 @@ defineSupportCode(({Given, When, Then, After}) => {
 
   After(callback => {
     signature = null;
+    server.stop();
   });
 
   Given('the server is started', () => {
