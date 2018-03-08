@@ -1,10 +1,8 @@
-export function register(server, options, next) {
-  server.auth.strategy('githubwebhook', 'githubwebhook', 'required', {secret: process.env.GITHUB_WEBHOOK_SECRET});
-
-  next();
-}
-
-register.attributes = {
+export const plugin = {
+  async register(server, options) {
+    server.auth.strategy('githubwebhook', 'githubwebhook', {secret: process.env.GITHUB_WEBHOOK_SECRET});
+    server.auth.default('githubwebhook');
+  },
   name: 'auth',
-  dependencies: ['hapi-github-webhooks']
+  dependencies: ['@travi/hapi-github-webhooks']
 };
