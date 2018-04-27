@@ -22,7 +22,7 @@
     "greenkeeper:upload-lockfile": "greenkeeper-lockfile-upload"
   },
   "engines": {
-    "node": "8.9.4"
+    "node": "10"
   },
   "config": {
     "commitizen": {
