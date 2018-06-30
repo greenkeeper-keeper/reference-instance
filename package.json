@@ -46,7 +46,7 @@
     "validate-commit-msg": "2.14.0"
   },
   "dependencies": {
-    "@travi/hapi-github-webhooks": "2.0.0",
+    "@travi/hapi-github-webhooks": "2.0.1-beta",
     "dotenv-safe": "6.0.0",
     "glue": "5.0.0",
     "good": "8.1.1",
