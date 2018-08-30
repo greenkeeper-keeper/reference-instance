@@ -17,7 +17,6 @@ defineSupportCode(({Given, When, Then, After}) => {
   Given('the server is started', () => {
     process.env.GITHUB_TOKEN = any.string();
     process.env.GITHUB_WEBHOOK_SECRET = githubSecret;
-    process.env.ACCEPT_ACTION = 'rebase';
     process.env.PORT = 8888;
 
     return require('../../../../src/index').default.then(instance => {
