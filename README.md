@@ -30,6 +30,7 @@ and are defined in [`.env.example`](./.env.example)
   scopes in order to work properly
 * `GITHUB_WEBHOOK_SECRET`: a secret used to [secure your webhooks](https://developer.github.com/webhooks/securing/)
   which must match the secret used for the webhook defined for each repo
+* `ACCEPT_ACTION` _optional_: how the contribution [should be integrated](https://github.com/greenkeeper-keeper/hapi-greenkeeper-keeper#configuration), once accepted
 
 ## Tagging strategy
 
