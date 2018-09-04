@@ -26,7 +26,7 @@ export default {
           github: {
             token: process.env.GITHUB_TOKEN
           },
-          acceptAction: 'rebase'
+          acceptAction: process.env.ACCEPT_ACTION || 'rebase'
         }
       },
       {
