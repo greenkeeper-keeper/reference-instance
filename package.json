@@ -44,7 +44,7 @@
   },
   "dependencies": {
     "dotenv-safe": "6.1.0",
-    "glue": "5.0.0",
+    "glue": "6.0.0",
     "good": "8.1.2",
     "good-console": "7.1.0",
     "good-squeeze": "^5.1.0",
