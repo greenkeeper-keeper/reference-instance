@@ -49,7 +49,7 @@
     "good-console": "8.0.0",
     "good-squeeze": "^5.1.0",
     "hapi-github-webhooks": "^2.0.2",
-    "hapi-graceful-shutdown-plugin": "2.0.4",
+    "hapi-graceful-shutdown-plugin": "2.0.5",
     "hapi-greenkeeper-keeper": "2.1.4"
   }
 }
