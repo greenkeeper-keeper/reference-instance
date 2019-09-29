@@ -1,4 +1,4 @@
-require('dotenv-safe').load();
+require('dotenv-safe').config();
 
 export default {
   server: {port: process.env.PORT},
