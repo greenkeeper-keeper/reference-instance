@@ -46,12 +46,12 @@
     "validate-commit-msg": "2.14.0"
   },
   "dependencies": {
+    "@hapi/glue": "7.0.0",
+    "@travi/hapi-github-webhooks": "3.0.0",
     "dotenv-safe": "8.2.0",
-    "glue": "5.0.0",
     "good": "8.1.2",
     "good-console": "8.0.0",
     "good-squeeze": "^5.1.0",
-    "hapi-github-webhooks": "^2.0.2",
     "hapi-graceful-shutdown-plugin": "2.0.8",
     "hapi-greenkeeper-keeper": "2.2.1"
   }

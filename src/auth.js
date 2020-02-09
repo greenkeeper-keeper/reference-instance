@@ -4,5 +4,5 @@ export const plugin = {
     server.auth.default('githubwebhook');
   },
   name: 'auth',
-  dependencies: ['hapi-github-webhooks']
+  dependencies: ['@travi/hapi-github-webhooks']
 };

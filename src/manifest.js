@@ -36,7 +36,7 @@ export default {
           sigintTimeout: 1
         }
       },
-      {plugin: 'hapi-github-webhooks'},
+      {plugin: '@travi/hapi-github-webhooks'},
       {plugin: './auth'}
     ]
   }
