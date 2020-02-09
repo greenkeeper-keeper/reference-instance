@@ -10,6 +10,7 @@
   "scripts": {
     "lint:md": "globstar --node -- markdownlint **/*.md",
     "lint:engines": "check-engine",
+    "lint:peer": "npm ls >/dev/null",
     "tests:integration": "cucumber-js test/integration --require-module babel-register --tags 'not @wip'",
     "tests:integration:debug": "DEBUG=test run-s tests:integration",
     "tests:integration:wip": "cucumber-js test/integration --require-module babel-register --tags @wip",
