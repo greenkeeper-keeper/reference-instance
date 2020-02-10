@@ -11,7 +11,7 @@
     "lint:md": "globstar --node -- markdownlint **/*.md",
     "lint:engines": "check-engine",
     "lint:peer": "npm ls >/dev/null",
-    "tests:integration": "cucumber-js test/integration --require-module babel-register --tags 'not @wip'",
+    "tests:integration": "cucumber-js test/integration --require-module @babel/register --tags 'not @wip'",
     "tests:integration:debug": "DEBUG=test run-s tests:integration",
     "tests:integration:wip": "cucumber-js test/integration --require-module babel-register --tags @wip",
     "test": "run-s lint:* tests:*",
@@ -30,10 +30,9 @@
     }
   },
   "devDependencies": {
+    "@babel/register": "7.8.3",
     "@travi/any": "2.0.7",
-    "babel-cli": "6.26.0",
-    "babel-preset-es2015-node": "6.1.1",
-    "babel-preset-stage-3": "6.24.1",
+    "@travi/babel-preset": "3.0.12",
     "chai": "^4.2.0",
     "check-engine": "1.8.1",
     "cucumber": "6.0.5",
