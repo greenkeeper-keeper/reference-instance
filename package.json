@@ -15,8 +15,6 @@
     "tests:integration:debug": "DEBUG=test run-s tests:integration",
     "tests:integration:wip": "cucumber-js test/integration --require-module babel-register --tags @wip",
     "test": "run-s lint:* tests:*",
-    "commitmsg": "validate-commit-msg",
-    "precommit": "npm test",
     "build": "babel src --out-dir lib",
     "start": "node lib/index.js",
     "postinstall": "run-s build"
