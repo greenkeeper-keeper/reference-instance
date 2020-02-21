@@ -51,6 +51,6 @@
     "good-console": "8.0.0",
     "good-squeeze": "^5.1.0",
     "hapi-graceful-shutdown-plugin": "2.0.8",
-    "hapi-greenkeeper-keeper": "3.0.3"
+    "hapi-greenkeeper-keeper": "3.0.4"
   }
 }
