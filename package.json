@@ -31,7 +31,7 @@
     "@babel/cli": "7.8.4",
     "@babel/register": "7.9.0",
     "@travi/any": "2.0.7",
-    "@travi/babel-preset": "3.0.15",
+    "@travi/babel-preset": "3.0.16",
     "chai": "^4.2.0",
     "check-engine": "1.8.1",
     "cucumber": "6.0.5",
