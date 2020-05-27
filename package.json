@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@babel/cli": "7.10.1",
-    "@babel/register": "7.9.0",
+    "@babel/register": "7.10.1",
     "@travi/any": "2.0.9",
     "@travi/babel-preset": "3.0.20",
     "chai": "^4.2.0",
